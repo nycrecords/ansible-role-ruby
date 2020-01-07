@@ -1,7 +1,7 @@
 ---
 dependencies:
   - nycrecords.rhsm
-  - nycrecords.yum_config_manage
+  - nycrecords.yum_config_manager
 
 galaxy_info:
   role_name: ruby

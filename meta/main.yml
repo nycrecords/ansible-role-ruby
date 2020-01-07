@@ -1,10 +1,13 @@
 ---
-dependencies: []
+dependencies:
+  - nycrecords.rhsm
+  - nycrecords.yum_config_manage
 
 galaxy_info:
-  author: geerlingguy
+  role_name: ruby
+  author: joelbcastillo
   description: Ruby installation for Linux.
-  company: "Midwestern Mac, LLC"
+  company: "City of New York, Department of Records and Information Services"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:

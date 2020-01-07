@@ -3,7 +3,7 @@ dependency:
   name: galaxy
   options:
     role-file: molecule/resources/requirements.yml
-    roles-path: ../../molecule/resources/roles/
+    roles-path: molecule/resources/roles/
 driver:
   name: vagrant
   provider:
@@ -33,7 +33,7 @@ provisioner:
             - rhel-7-server-extras-rpms
             - rhel-server-rhscl-7-rpms
   env:
-    ANSIBLE_ROLES_PATH: ../resources/roles/
+    ANSIBLE_ROLES_PATH: molecule/resources/roles/
 verifier:
   name: testinfra
   directory: ../resources/tests/

@@ -27,11 +27,18 @@
     src: rubygems.sh
     dest: /etc/profile.d/rubygems.sh
     mode: 0644
+  when: not ruby_use_scl
 
 # Install Bundler and configured gems.
 - name: Install Bundler.
-  gem: name=bundler state=present user_install=no
-  when: ruby_install_bundler
+  gem:
+    name: bundler
+    state: present
+    user_install: no
+  when:
+    - ruby_install_bundler
+    - not ruby_use_scl
+
 
 - name: Install configured gems.
   gem:

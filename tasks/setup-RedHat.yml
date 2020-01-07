@@ -3,3 +3,10 @@
   yum:
     name: "{{ ruby_packages }}"
     state: present
+
+- name: Setup autoload of ruby software collections
+  template:
+    src: "ruby.sh.j2"
+    dest: "/etc/profile.d/{{ ruby_scl_package }}.sh"
+    mode: 0644
+  when: ruby_use_scl

@@ -19,3 +19,4 @@ ruby_source_configure_command: ./configure --enable-shared
 
 # Default should usually work, but this will be overridden on Ubuntu 14.04.
 ruby_rubygems_package_name: rubygems
+ruby_rubygems_executable_path: /opt/rh/rh-ruby25/root/usr/bin/gem

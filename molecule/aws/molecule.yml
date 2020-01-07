@@ -5,9 +5,7 @@ dependency:
     role-file: molecule/resources/requirements.yml
     roles-path: ../../molecule/resources/roles/
 driver:
-  name: vagrant
-  provider:
-    name: virtualbox
+  name: ec2
 lint:
   name: yamllint
   options:
@@ -15,11 +13,15 @@ lint:
       ignore: molecule/resources/roles/
 platforms:
   - name: instance
-    box: ${VAGRANT_DEFAULT_BOX:-generic/rhel7}
+    image: ami-000db10762d0c4c05
+    instance_type: t2.micro
+    vpc_subnet_id: subnet-38a38302
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
+  connection_options:
+    ansible_user: ec2-user
   playbooks:
     converge: ../resources/playbooks/converge.yml
     cleanup: ../resources/playbooks/cleanup.yml
@@ -36,6 +38,8 @@ provisioner:
     ANSIBLE_ROLES_PATH: ../resources/roles/
 verifier:
   name: testinfra
+  options:
+    verbose: true
   directory: ../resources/tests/
   lint:
     name: flake8

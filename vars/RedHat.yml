@@ -8,3 +8,5 @@ __ruby_build_packages:
   - '@development'
   - zlib-devel
   - openssl-static
+ruby_scl_package: rh-ruby25
+ruby_rubygems_package_name: rh-ruby25-rubygems

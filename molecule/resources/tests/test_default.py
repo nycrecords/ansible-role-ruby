@@ -14,7 +14,7 @@ def test_ruby_installed(host):
 
 
 def test_rubygems_installed(host):
-    rubygems = host.package("rh-ruby25-ruby-rubygems")
+    rubygems = host.package("rh-ruby25-rubygems")
 
     assert rubygems.is_installed
 

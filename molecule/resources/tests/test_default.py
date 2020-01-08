@@ -20,6 +20,6 @@ def test_rubygems_installed(host):
 
 
 def test_bundler_installed(host):
-    bundler = host.package("rh-ruby25-ruby-bundler")
+    bundler = host.package("rh-ruby25-rubygem-bundler")
 
     assert bundler.is_installed

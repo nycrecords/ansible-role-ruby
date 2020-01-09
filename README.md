@@ -1,7 +1,7 @@
 # Ansible Role: Ruby
 
 ![GitHub](https://img.shields.io/github/license/nycrecords/ansible-role-ruby)
-[![Build Status](https://travis-ci.com/nycrecords/ansible-role-ruby.svg?branch=master)](https://travis-ci.org/nycrecords/ansible-role-ruby)
+[![Build Status](https://travis-ci.com/nycrecords/ansible-role-ruby.svg?branch=master)](https://travis-ci.com/nycrecords/ansible-role-ruby)
 [![Galaxy](https://img.shields.io/badge/galaxy-nycrecords.ruby-blue.svg)](https://galaxy.ansible.com/nycrecords/ruby)
 ![Ansible](https://img.shields.io/ansible/role/d/45716)
 ![Ansible](https://img.shields.io/ansible/quality/45716)
